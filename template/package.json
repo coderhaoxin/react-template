@@ -1,0 +1,44 @@
+{
+  "name": "{{ name }}",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "release": "node tool/release.js",
+    "start": "node tool/server.js",
+    "build": "node tool/build.js"
+  },
+  "dependencies": {
+    "rxjs": "5"
+  },
+  "devDependencies": {
+    "babel-core": "6",
+    "babel-loader": "6",
+    "babel-plugin-module-resolver": "2",
+    "babel-plugin-transform-object-rest-spread": "6",
+    "babel-preset-env": "1",
+    "connect-history-api-fallback": "1",
+    "css-loader": "0",
+    "eslint-config-ok": "github:haoxins/eslint-config",
+    "express": "4",
+    "extract-text-webpack-plugin": "2",
+    "file-loader": "0",
+    "ora": "1",
+    "postcss-cssnext": "2",
+    "postcss-import": "9",
+    "rimraf": "2",
+    "style-loader": "0",
+    "webpack": "2",
+    "webpack-dev-middleware": "1",
+    "webpack-dev-server": "2",
+    "webpack-hot-middleware": "2",
+    "webpack-merge": "4"
+  },
+  "engines": {
+    "node": ">= 8.0.0"
+  },
+  "eslintConfig": {
+    "extends": [
+      "ok"
+    ]
+  }
+}
