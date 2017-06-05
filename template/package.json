@@ -8,7 +8,12 @@
     "build": "node tool/build.js"
   },
   "dependencies": {
-    "rxjs": "5"
+    "prop-types": "15",
+    "react": "15",
+    "react-dom": "15",
+    "react-duo": "2",
+    "rxjs": "5",
+    "styled-components": "2"
   },
   "devDependencies": {
     "babel-core": "6",
@@ -16,6 +21,7 @@
     "babel-plugin-module-resolver": "2",
     "babel-plugin-transform-object-rest-spread": "6",
     "babel-preset-env": "1",
+    "babel-preset-react": "6",
     "connect-history-api-fallback": "1",
     "css-loader": "0",
     "eslint-config-ok": "github:haoxins/eslint-config",

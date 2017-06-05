@@ -3,13 +3,13 @@ import styled from 'styled-components'
 import React from 'react'
 
 const Main = styled.main`
-  color: blue;
+  color: green;
 `
 
-const App = (props) => {
+const Signin = (props) => {
   return (
-    <Main>app</Main>
+    <Main>signin</Main>
   )
 }
 
-export default App
+export default Signin
