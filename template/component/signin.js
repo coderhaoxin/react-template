@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import React from 'react'
 
 const Main = styled.main`
+  display: grid;
   color: green;
 `
 
