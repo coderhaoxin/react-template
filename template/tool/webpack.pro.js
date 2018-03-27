@@ -1,12 +1,20 @@
 
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
+// const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const base = require('./webpack.base')
 const merge = require('webpack-merge')
 const webpack = require('webpack')
 
 const config = merge(base, {
+  mode: 'production',
   output: {
     filename: '[name].[chunkhash:18].js'
+  },
+  optimization: {
+    splitChunks: {
+      name: 'vendor',
+      minSize: 0,
+      chunks: "all",
+    }
   }
 })
 
@@ -17,30 +25,10 @@ config.plugins = [
       NODE_ENV: '"production"'
     }
   }),
-  new ExtractTextPlugin({
-    filename: '[name].[contenthash:18].css'
-  }),
   new webpack.EnvironmentPlugin(['NODE_ENV']),
-  new webpack.optimize.OccurrenceOrderPlugin(true),
-  new webpack.optimize.CommonsChunkPlugin({
-    name: 'vendor',
-    minChunks: (module, count) => {
-      return (
-        module.resource &&
-        module.resource.endsWith('.js') &&
-        module.resource.includes('/node_modules/')
-      )
-    }
-  }),
-  new webpack.optimize.CommonsChunkPlugin({
-    name: 'manifest',
-    chunks: ['vendor']
-  }),
-  new webpack.LoaderOptionsPlugin({
-    minimize: true,
-    debug: false
-  }),
-  new webpack.NoEmitOnErrorsPlugin()
+  // new ExtractTextPlugin({
+  //   filename: '[name].[contenthash:18].css'
+  // })
 ]
 
 module.exports = config
