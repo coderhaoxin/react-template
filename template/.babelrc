@@ -1,21 +1,16 @@
 {
-  "presets": ["react", ["env", {
+  "presets": ["@babel/react", ["@babel/env", {
     "targets": {
       "safari": 10,
       "chrome": 59,
       "edge": 15
-    },
-    "exclude": [
-      "transform-regenerator"
-    ]}]
-  ],
+    }
+  }]],
   "plugins": [
-    "transform-object-rest-spread",
     ["module-resolver", {
       "root": [],
       "alias": {
-        "com": "./component",
-        "css": "./cssbase"
+        "com": "./component"
       }
     }]
   ]
