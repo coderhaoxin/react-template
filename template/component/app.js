@@ -1,10 +1,10 @@
 
-import styled from 'styled-components'
+import glamorous from 'glamorous'
 import React from 'react'
 
-const Main = styled.main`
-  color: blue;
-`
+const Main = glamorous.main({
+  color: 'blue',
+})
 
 const App = (props) => {
   return (

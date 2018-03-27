@@ -1,10 +1,10 @@
 
-import styled from 'styled-components'
+import glamorous from 'glamorous'
 import React from 'react'
 
-const Main = styled.main`
-  color: green;
-`
+const Main = glamorous.main({
+  color: 'green',
+})
 
 const Signin = (props) => {
   return (
