@@ -1,31 +1,22 @@
 
 import DevTools from "mobx-react-devtools"
-import glamorous from 'glamorous'
+import { onError } from 'mobx-react'
 import React from 'react'
 
-import Model from './store'
-
-const store = new Model()
-
-const Main = glamorous.main({
-  color: 'blue',
-})
+import Counter from './counter'
 
 const App = (props) => {
   return (
     <>
       <DevTools />
-      <Main>
-        { 'count:' + store.count }
-      </Main>
+      <Counter />
     </>
   )
 }
 
-setInterval(() => {
-  store.add(3)
-}, 1200)
-
 export default App
 
-window.store = store
+onError(err => {
+  console.error('global error')
+  console.error(err)
+})
