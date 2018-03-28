@@ -5,8 +5,8 @@ const { distPath } = require('./config')
 
 module.exports = {
   entry: {
-    signin: join(__dirname, '../template/signin.js'),
-    app: join(__dirname, '../template/app.js')
+    signin: join(__dirname, '../template/signin'),
+    app: join(__dirname, '../template/app')
   },
   output: {
     path: distPath,
@@ -15,13 +15,13 @@ module.exports = {
   },
   module: {
     rules: [{
-      test: /\.js$/,
+      test: /\.jsx?$/,
       loader: 'babel-loader',
       exclude: /node_modules/
     }]
   },
   resolve: {
-    extensions: ['.js']
+    extensions: ['.js', '.jsx']
   },
   devtool: '#source-map'
 }
