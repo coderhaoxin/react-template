@@ -29,4 +29,5 @@ const Counter = () => (
     <CounterComponent />
   </Provider>
 )
+
 export default Counter
