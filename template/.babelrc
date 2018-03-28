@@ -7,11 +7,16 @@
     }
   }]],
   "plugins": [
-    ["module-resolver", {
-      "root": [],
-      "alias": {
-        "com": "./component"
+    "@babel/proposal-object-rest-spread",
+    "@babel/proposal-class-properties",
+    "@babel/proposal-decorators",
+    [
+      "module-resolver", {
+        "root": [],
+        "alias": {
+          "com": "./component"
+        }
       }
-    }]
+    ]
   ]
 }
