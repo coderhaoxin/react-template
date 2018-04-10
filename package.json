@@ -1,9 +1,0 @@
-{
-  "name": "react-template",
-  "private": true,
-  "version": "1.0.0",
-  "main": "meta.json",
-  "repository": "coderhaoxin/react-template",
-  "author": "haoxin",
-  "license": "MIT"
-}
