@@ -6,7 +6,7 @@
     "release": "node tool/release.js",
     "start": "node tool/server.js",
     "build": "node tool/build.js",
-    "lint": "eslint ."
+    "lint": ""
   },
   "dependencies": {
     "glamor": "^2.20.40",
@@ -21,24 +21,8 @@
     "rxjs": "^5.5.7"
   },
   "devDependencies": {
-    "@babel/core": "^7.0.0-beta.42",
-    "@babel/plugin-proposal-class-properties": "^7.0.0-beta.42",
-    "@babel/plugin-proposal-decorators": "^7.0.0-beta.42",
-    "@babel/plugin-proposal-object-rest-spread": "^7.0.0-beta.42",
-    "@babel/plugin-transform-react-jsx": "^7.0.0-beta.42",
-    "@babel/preset-env": "^7.0.0-beta.42",
-    "@babel/preset-react": "^7.0.0-beta.42",
-    "babel-eslint": "^8.2.2",
-    "babel-loader": "^8.0.0-beta.2",
-    "babel-plugin-module-resolver": "^3.1.0",
     "connect-history-api-fallback": "^1.5.0",
     "css-loader": "^0.28.11",
-    "eslint": "^4.19.1",
-    "eslint-config-react-app": "^2.1.0",
-    "eslint-plugin-flowtype": "^2.46.1",
-    "eslint-plugin-import": "^2.9.0",
-    "eslint-plugin-jsx-a11y": "^6.0.3",
-    "eslint-plugin-react": "^7.7.0",
     "express": "^4.16.3",
     "file-loader": "^1.1.11",
     "ora": "^2.0.0",
@@ -52,10 +36,5 @@
   },
   "engines": {
     "node": ">= 8.0.0"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app"
-    ]
   }
 }
