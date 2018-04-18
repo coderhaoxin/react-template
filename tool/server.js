@@ -11,13 +11,7 @@ const compiler = webpack(config)
 const app = express()
 
 app.use(history({
-  rewrites: [{
-    from: /^\/signin/,
-    to: '/template/signin.html'
-  }, {
-    from: /^\/app/,
-    to: '/template/app.html'
-  }]
+  index: '/dist/index.html'
 }))
 
 app.use(require('webpack-dev-middleware')(compiler, {
@@ -30,10 +24,11 @@ app.use(require('webpack-hot-middleware')(compiler))
 
 app.use(express.static(join(__dirname, '..')))
 
-app.listen(3000, err => {
+const port = 3003
+app.listen(port, err => {
   if (err) {
     return console.error(err)
   }
 
-  console.info('Listening at http://localhost:3000')
+  console.info(`Listening at localhost: ${port}`)
 })

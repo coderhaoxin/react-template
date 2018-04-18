@@ -5,23 +5,26 @@ const { distPath } = require('./config')
 
 module.exports = {
   entry: {
-    signin: join(__dirname, '../template/signin'),
-    app: join(__dirname, '../template/app')
+    index: join(__dirname, '../src/index')
   },
   output: {
     path: distPath,
-    publicPath: '/dist/',
     filename: '[name].js'
   },
   module: {
     rules: [{
-      test: /\.jsx?$/,
-      loader: 'babel-loader',
+      test: /\.tsx?$/,
+      loader: 'awesome-typescript-loader',
+      exclude: /node_modules/
+    }, {
+      enforce: 'pre',
+      test: /\.js$/,
+      loader: 'source-map-loader',
       exclude: /node_modules/
     }]
   },
   resolve: {
-    extensions: ['.js', '.jsx']
+    extensions: ['.js', '.ts', '.tsx', '.json']
   },
   devtool: '#source-map'
 }

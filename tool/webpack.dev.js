@@ -1,4 +1,5 @@
 
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 const base = require('./webpack.base')
 const merge = require('webpack-merge')
 const webpack = require('webpack')
@@ -9,6 +10,9 @@ const isArray = Array.isArray
 const config = merge(base, {
   mode: 'development',
   devtool: 'cheap-module-eval-source-map',
+  output: {
+    publicPath: '/dist/'
+  },
   devServer: {
     historyApiFallback: true,
     noInfo: true
@@ -30,6 +34,11 @@ config.plugins = [
     'process.env': {
       NODE_ENV: '"development"'
     }
+  }),
+  new HtmlWebpackPlugin({
+    filename: 'index.html',
+    template: join(__dirname, '../public/index.html'),
+    inject: true
   }),
   new webpack.HotModuleReplacementPlugin(),
   new webpack.NoEmitOnErrorsPlugin()
