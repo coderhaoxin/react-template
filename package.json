@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "react-scripts-ts start",
-    "build": "react-scripts-ts build",
-    "release": "node tool/release.js",
+    "start": "node tool/server",
+    "build": "node tool/build",
+    "release": "node tool/release",
     "lint": ""
   },
   "dependencies": {
@@ -17,21 +17,19 @@
     "prop-types": "^15.6.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "react-router": "^4.2.0",
-    "rxjs": "^5.5.7"
+    "react-router": "^4.2.0"
   },
   "devDependencies": {
     "@types/node": "^7.0.60",
-    "@types/react": "^16.3.6",
-    "@types/react-dom": "^16.0.4",
+    "@types/react": "^16.3.11",
+    "@types/react-dom": "^16.0.5",
+    "awesome-typescript-loader": "^5.0.0",
     "connect-history-api-fallback": "^1.5.0",
-    "css-loader": "^0.28.11",
     "express": "^4.16.3",
-    "file-loader": "^1.1.11",
     "ora": "^2.0.0",
-    "react-scripts-ts": "^2.14.0",
     "rimraf": "^2.6.2",
-    "style-loader": "^0.20.3",
+    "source-map-loader": "^0.2.3",
+    "typescript": "^2.8.1",
     "webpack": "^4.2.0",
     "webpack-dev-middleware": "^3.0.1",
     "webpack-dev-server": "^3.1.1",

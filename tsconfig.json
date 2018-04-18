@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "outDir": "dist",
+    "outDir": "./dist/",
     "module": "commonjs",
     "target": "es6",
     "lib": ["es6", "dom"],
@@ -8,16 +8,17 @@
     "allowJs": true,
     "jsx": "react",
     "moduleResolution": "node",
+    "baseUrl": "src",
     "rootDir": "src",
+    "experimentalDecorators": true,
     "noImplicitReturns": true,
     "noImplicitThis": true,
     "noImplicitAny": true,
-    "strictNullChecks": true
+    "strictNullChecks": true,
+    "esModuleInterop": true
   },
-  "exclude": [
-    "node_modules",
-    "dist",
-    "tool"
+  "include": [
+    "./src/**/*"
   ],
   "types": [
     "typePatches"

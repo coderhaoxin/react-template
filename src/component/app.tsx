@@ -5,7 +5,7 @@ import React from 'react'
 
 import Counter from './counter'
 
-const App = (props) => {
+const App = () => {
   return (
     <>
       <DevTools />

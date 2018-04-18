@@ -1,12 +1,13 @@
 
-import { observable } from 'mobx'
+import { observable, action } from 'mobx'
 
-const store = observable({
-  count: 0,
+class Store {
+  @observable public count: number
 
-  add(num = 1) {
-    this.count += num
+  @action
+  add = (num?: number): void => {
+    this.count += num || 1
   }
-})
+}
 
-export default store
+export default Store

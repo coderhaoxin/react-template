@@ -1,33 +1,29 @@
 
-import { Provider, observer, inject } from 'mobx-react'
+import { observer, inject } from 'mobx-react'
 import React, { Component } from 'react'
 import glamorous from 'glamorous'
 
-import store from './store'
+import Store from './store'
 
 const Main = glamorous.main({
   color: 'blue',
 })
+const STORE:string = 'counter_store'
 
-@inject(stores => ({ count: stores.counterStore.count }))
+@inject(STORE)
 @observer
-class CounterComponent extends Component {
+class Counter extends Component<any, any> {
   render() {
+    const store = this.props[STORE] as Store
     return (
       <Main>
         <span>
-          { 'count:' + this.props.count }
+          { 'count:' + store.count }
         </span>
         <button onClick={() => store.add(3)}>add</button>
       </Main>
     )
   }
 }
-
-const Counter = () => (
-  <Provider counterStore={store}>
-    <CounterComponent />
-  </Provider>
-)
 
 export default Counter
