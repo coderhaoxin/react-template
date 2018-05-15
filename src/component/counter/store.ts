@@ -2,11 +2,11 @@
 import { observable, action } from 'mobx'
 
 class Store {
-  constructor() {
+  @observable public count: number
+
+  constructor () {
     this.count = 0
   }
-
-  @observable public count: number
 
   @action
   add = (num?: number): void => {

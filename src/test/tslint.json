@@ -1,0 +1,10 @@
+{
+  "rules": {
+    "ban": [
+      true,
+      ["describe", "only"],
+      ["expect", "only"],
+      ["it", "only"]
+    ]
+  }
+}

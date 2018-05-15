@@ -1,12 +1,11 @@
 
 import { Provider, observer, inject } from 'mobx-react'
 import styled from 'styled-components'
-import { Component } from 'react'
-import React from 'react'
+import React, { Component } from 'react'
 
 import Store from './store'
 
-const STORE:string = 'counterStore'
+const STORE: string = 'counterStore'
 
 const Main = styled.main`
   color: blue
@@ -15,14 +14,18 @@ const Main = styled.main`
 @inject(STORE)
 @observer
 class Counter extends Component<any, any> {
-  render() {
+  add () {
+    store.add(3)
+  }
+
+  render () {
     const store = this.props[STORE] as Store
     return (
       <Main>
         <span>
-          { 'count:' + store.count }
+          {'count:' + store.count}
         </span>
-        <button onClick={() => store.add(3)}>add</button>
+        <button onClick={this.add}>add</button>
       </Main>
     )
   }
