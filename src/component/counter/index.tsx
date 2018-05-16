@@ -1,7 +1,7 @@
 
 import { Provider, observer, inject } from 'mobx-react'
 import styled from 'styled-components'
-import React, { Component } from 'react'
+import React from 'react'
 
 import Store from './store'
 
@@ -13,7 +13,7 @@ const Main = styled.main`
 
 @inject(STORE)
 @observer
-class Counter extends Component<any, any> {
+class Counter extends React.Component<any, any> {
   add () {
     store.add(3)
   }
