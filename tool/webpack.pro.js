@@ -1,5 +1,4 @@
 
-// const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const base = require('./webpack.base')
 const merge = require('webpack-merge')
 const webpack = require('webpack')
@@ -25,10 +24,7 @@ config.plugins = [
       NODE_ENV: '"production"'
     }
   }),
-  new webpack.EnvironmentPlugin(['NODE_ENV']),
-  // new ExtractTextPlugin({
-  //   filename: '[name].[contenthash:18].css'
-  // })
+  new webpack.EnvironmentPlugin(['NODE_ENV'])
 ]
 
 module.exports = config
