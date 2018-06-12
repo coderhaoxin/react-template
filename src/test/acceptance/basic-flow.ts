@@ -27,9 +27,7 @@ describe('# basic flow', () => {
     await page.click('#app > main > button')
     await page.click('#app > main > button')
 
-    const f = () => document
-      .querySelector('#app > main > span')
-      .textContent
+    const f = () => document.querySelector('#app > main > span').textContent
     const result = await page.evaluate(f)
 
     expect(result).toBe('count:6')

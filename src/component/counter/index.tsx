@@ -7,7 +7,7 @@ import Store from './store'
 const STORE: string = 'counterStore'
 
 const Main = styled.main`
-  color: blue
+  color: blue;
 `
 
 @inject(STORE)
@@ -21,9 +21,7 @@ class Counter extends React.Component<any, any> {
     const store = this.props[STORE] as Store
     return (
       <Main>
-        <span>
-          {'count:' + store.count}
-        </span>
+        <span>{'count:' + store.count}</span>
         <button onClick={this.add}>add</button>
       </Main>
     )
