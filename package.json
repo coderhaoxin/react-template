@@ -10,7 +10,7 @@
     "test": "jest",
     "lint": "tslint 'src/**/*.ts?(x)'",
     "lint-check": "tslint-config-prettier-check ./tslint.json",
-    "fmt": "prettier --single-quote --no-semi --write 'src/**/*.ts?(x)'"
+    "fmt": "prettier --write 'src/**/*.ts?(x)'"
   },
   "dependencies": {
     "fetch.io": "^4.1.2",
