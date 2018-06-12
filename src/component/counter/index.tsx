@@ -13,11 +13,11 @@ const Main = styled.main`
 @inject(STORE)
 @observer
 class Counter extends React.Component<any, any> {
-  add () {
+  add() {
     store.add(3)
   }
 
-  render () {
+  render() {
     const store = this.props[STORE] as Store
     return (
       <Main>

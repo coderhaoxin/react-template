@@ -3,7 +3,7 @@ import { observable, action } from 'mobx'
 class Store {
   @observable public count: number
 
-  constructor () {
+  constructor() {
     this.count = 0
   }
 
