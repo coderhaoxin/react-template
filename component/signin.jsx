@@ -3,7 +3,7 @@ import glamorous from 'glamorous'
 import React from 'react'
 
 const Main = glamorous.main({
-  color: 'green',
+  color: 'green'
 })
 
 const Signin = (props) => {

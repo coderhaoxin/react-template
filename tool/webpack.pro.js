@@ -12,7 +12,7 @@ const config = merge(base, {
     splitChunks: {
       name: 'vendor',
       minSize: 0,
-      chunks: "all",
+      chunks: 'all'
     }
   }
 })
