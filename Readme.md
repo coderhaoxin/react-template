@@ -1,5 +1,18 @@
 
-React template for myself !
+### {{ name }}
 
-### License
-MIT
+### How to ?
+
+* dev
+
+```bash
+npm i
+
+npm start
+```
+
+* build
+
+```
+npm run build
+```
