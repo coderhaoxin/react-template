@@ -1,4 +1,3 @@
-
 import { fakeLogin } from '../../../api/user'
 
 import faker from 'faker'

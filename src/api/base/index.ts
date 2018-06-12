@@ -1,4 +1,3 @@
-
 import Fetch from 'fetch.io'
 
 const request = new Fetch({

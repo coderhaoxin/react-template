@@ -1,4 +1,3 @@
-
 import { request } from './base'
 
 export async function fakeLogin (username: string, password: string) {

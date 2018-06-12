@@ -1,4 +1,3 @@
-
 import DevTools from 'mobx-react-devtools'
 import { onError } from 'mobx-react'
 import React from 'react'

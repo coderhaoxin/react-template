@@ -1,4 +1,3 @@
-
 import { Provider, observer, inject } from 'mobx-react'
 import styled from 'styled-components'
 import React from 'react'
